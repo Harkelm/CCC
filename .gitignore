@@ -1,0 +1,11 @@
+# Context Command Center (CCC) Framework - Git Ignore File
+
+# Personal Research Archive
+# Exclude user's private research results while keeping the framework structure
+Archive/Research/
+
+# Common development files (add more as needed)
+.DS_Store
+*.log
+.env*
+*.tmp
