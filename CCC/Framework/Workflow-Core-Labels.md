@@ -19,7 +19,7 @@
 ### ✅ **Task & Action Tags**
 - **[TASK-###]** - Specific actionable items requiring completion
   - Format: Sequential numbering within projects or workflows
-  - Example: `[TASK-001]` Deploy Obsidian vault structure with security controls
+  - Example: `[TASK-001]` Deploy framework directory structure with security controls
   - Usage: Concrete deliverables, implementation steps, action items
 
 - **[ACTION-###]** - Immediate actions requiring execution
@@ -79,7 +79,7 @@
 
 - **[INTEG-###]** - Integration and cross-system coordination
   - Format: Integration scope numbering
-  - Example: `[INTEG-001]` Obsidian-CCC framework integration requirements
+  - Example: `[INTEG-001]` Platform-CCC framework integration requirements
   - Usage: System integration, cross-platform coordination, compatibility
 
 ---
