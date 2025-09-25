@@ -55,12 +55,12 @@ This command leverages the CCC Agent Component System with dynamic loading:
 - **CCC/Framework/Workflow-Core-Labels.md**: Systematic organization and discovery
 
 #### **Contextual Components (Domain-Dependent)**
-- **@CCC/Framework/Domain-Detection-Quick-Reference.md**: Auto-detection logic for domain classification
-- **@CCC/Framework/Validation-Tier-Selection-Quick-Reference.md**: Smart validation tier assignment
-- **@CCC/Framework/Comparative-Analysis-Quick-Reference.md**: Systematic comparison framework
-- **@CCC/Framework/Validation-Quick-Reference.md**: Applied for academic/safety-critical research
-- **@CCC/Framework/Risk-Quick-Reference.md**: Loaded for practical/safety research
-- **@Templates/Template-Guide.md**: Smart template selection based on domain
+- **CCC/Framework/Domain-Detection-Quick-Reference.md**: Auto-detection logic for domain classification
+- **CCC/Framework/Validation-Tier-Selection-Quick-Reference.md**: Smart validation tier assignment
+- **CCC/Framework/Comparative-Analysis-Quick-Reference.md**: Systematic comparison framework
+- **CCC/Framework/Validation-Quick-Reference.md**: Applied for academic/safety-critical research
+- **CCC/Framework/Risk-Quick-Reference.md**: Loaded for practical/safety research
+- **Templates/Template-Guide.md**: Smart template selection based on domain
 - **Templates/Search-Strategies/Product-Research-Strategy.md**: Product domain research methodology
 
 ### **Research Domain Structure**
@@ -78,12 +78,11 @@ This command leverages the CCC Agent Component System with dynamic loading:
 ```
 📋 Research Domain Analysis:
 [ ] **MANDATORY**: Current datetime recorded in 'YYYY-MM-DD HH:MM:SS CST' format
-[ ] Research domain identified using @CCC/Framework/Domain-Detection-Quick-Reference.md
-[ ] Template selection from @Templates/Template-Guide.md based on domain
-[ ] Validation tier assignment using @CCC/Framework/Validation-Tier-Selection-Quick-Reference.md
+[ ] Research domain identified using CCC/Framework/Domain-Detection-Quick-Reference.md
+[ ] Template selection from Templates/Template-Guide.md based on domain
+[ ] Validation tier assignment using CCC/Framework/Validation-Tier-Selection-Quick-Reference.md
 [ ] Component loading decisions based on research requirements
 [ ] Wave structure adaptation based on topic complexity
-[ ] Quality standards establishment per @CCC/Agents/Agent.md
 ```
 
 **Domain Classification Matrix**:
@@ -97,7 +96,7 @@ This command leverages the CCC Agent Component System with dynamic loading:
 
 **Adaptive Template Selection**:
 ```markdown
-Domain → Template Mapping (from @Templates/Template-Guide.md):
+Domain → Template Mapping (from Templates/Template-Guide.md):
 - Academic: Research-Report-Template (Extended validation)
 - Technical: Technical-Guide-Template (Essential validation)
 - Product: Product-Analysis-Template (Essential validation)
@@ -146,7 +145,7 @@ Task: CCC-Web-Researcher
 Context: "Execute [SEARCH-00X]: [specific research objective].
 
 FRAMEWORK INTEGRATION:
-- Apply @CCC/Framework/Admiralty-Rating-Codes.md (minimum B3 rating)
+- Apply CCC/Framework/Admiralty-Rating-Codes.md (minimum B3 rating)
 - Use template: [domain-appropriate template from Template-Guide.md]
 - Search strategy: [domain-specific strategy from Search-Strategies/]
 - Validation tier: [Essential/Extended/Comprehensive from Validation-Tier-Selection]
@@ -169,13 +168,13 @@ OUTPUT REQUIREMENTS:
 
 #### **[WAVE-003]: Comparative Analysis [MANDATORY]**
 **Objective**: Systematic comparison of alternatives with decision framework
-**Search Tasks**: Focused on comparative evaluation and recommendation synthesis using @CCC/Framework/Comparative-Analysis-Quick-Reference.md
+**Search Tasks**: Focused on comparative evaluation and recommendation synthesis using CCC/Framework/Comparative-Analysis-Quick-Reference.md
 **Output**: Clear comparison matrices and decision-making guidance following systematic comparison structure
 
 **Additional Waves**: Scale beyond 3 waves for complex research requiring specialized investigation phases
 
 **Agent Context Package Requirements**:
-- **@CCC/Agents/Agent.md**: Core behavioral specifications and quality standards
+- **CCC/Agents/Agent.md**: Core behavioral specifications and quality standards
 - **Research Planning Context**: Current wave objectives and findings from previous waves
 - **Template Specifications**: Domain-appropriate template from Template-Guide.md
 - **Search Strategy**: Domain-specific methodology from Search-Strategies/ directory
@@ -188,14 +187,14 @@ OUTPUT REQUIREMENTS:
 **Duration**: 10-25 minutes | **Decision-Oriented**
 
 **Synthesis Protocol**:
-1. **Evidence Integration**: Systematic compilation using @CCC/Framework/Admiralty-Rating-Codes.md
+1. **Evidence Integration**: Systematic compilation using CCC/Framework/Admiralty-Rating-Codes.md
 2. **Comparative Framework**: Structured comparison of alternatives with pros/cons analysis
 3. **Recommendation Development**: Evidence-based recommendations with rationale
 4. **Quality Validation**: Application of appropriate validation tier
 
 **Comparative Analysis Standards**:
 ```
-📋 Comparative Analysis Checklist (from @CCC/Framework/Comparative-Analysis-Quick-Reference.md):
+📋 Comparative Analysis Checklist (from CCC/Framework/Comparative-Analysis-Quick-Reference.md):
 [ ] Options identification: 3-5 main alternatives including status quo
 [ ] Evaluation criteria: 4-6 most important factors (cost, complexity, performance, risk, time, compatibility)
 [ ] Comparison matrix: Systematic scoring with evidence backing
@@ -255,13 +254,13 @@ OUTPUT REQUIREMENTS:
 
 ## Quality Framework Integration
 
-### **Source Quality Standards (from @CCC/Framework/Admiralty-Rating-Codes.md)**
+### **Source Quality Standards (from CCC/Framework/Admiralty-Rating-Codes.md)**
 - **Minimum Standard**: B3 rating for most research
 - **Academic Research**: A2 minimum for critical claims
 - **Safety-Critical**: A1 preferred with independent verification
 - **Product Research**: B2 minimum with bias assessment
 
-### **Validation Integration (from @CCC/Framework/Validation-Quick-Reference.md)**
+### **Validation Integration (from CCC/Framework/Validation-Quick-Reference.md)**
 ```
 Domain-Based Validation Assignment:
 - Academic/Scientific: Extended (15-item) validation
@@ -294,7 +293,7 @@ CRITICAL DOMAIN GUIDANCE:
 
 RESEARCH EXECUTION:
 - Apply multi-phase methodology: Query Analysis → Strategic Gathering → Content Analysis → Documentation
-- Source standards: @CCC/Framework/Admiralty-Rating-Codes.md (B3+ minimum)
+- Source standards: CCC/Framework/Admiralty-Rating-Codes.md (B3+ minimum)
 - Focus: Understand options and WHY they exist, evidence-based recommendations
 - Quality framework: Enhanced PRISMA validation as appropriate
 
@@ -305,7 +304,7 @@ Write structured documentation to designated wave/search file."
 ```
 Task: CCC-Web-Researcher
 Description: "Product research with specialized methodology"
-Context: "Product domain research using @Templates/Search-Strategies/Product-Research-Strategy.md:
+Context: "Product domain research using Templates/Search-Strategies/Product-Research-Strategy.md:
 
 FRAMEWORK:
 - Template: Product-Analysis-Template
@@ -327,7 +326,7 @@ Context: "Academic investigation using comprehensive validation:
 
 FRAMEWORK:
 - Template: Research-Report-Template
-- Validation: Extended tier, @CCC/Standards/Enhanced-PRISMA.md for critical findings
+- Validation: Extended tier, CCC/Standards/Enhanced-PRISMA.md for critical findings
 - Search Strategy: Academic-Research-Strategy (peer-reviewed focus)
 - Source minimum: A2 rating for key claims
 
@@ -374,14 +373,14 @@ FOCUS: Systematic literature review methodology, evidence hierarchy, expert vali
 
 ## Error Recovery & Quality Assurance
 
-### **Agent Failure Protocols (from @CCC/Framework/Emergency-Escalation-Procedures.md)**
+### **Agent Failure Protocols (from CCC/Framework/Emergency-Escalation-Procedures.md)**
 - **Retry with Modified Parameters**: Automatic adjustment for transient failures
 - **Alternative Agent Deployment**: Backup strategy with general-purpose agents
 - **Quality Degradation Documentation**: Clear impact assessment and limitations
 
 ### **Quality Control Integration**
 ```
-📋 Research Quality Validation (from @CCC/Agents/Agent.md):
+📋 Research Quality Validation (from CCC/Agents/Agent.md):
 [ ] **MANDATORY**: All documents include actual current datetime
 [ ] All sources meet minimum Admiralty Code ratings
 [ ] Template compliance verified for all outputs
