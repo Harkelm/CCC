@@ -12,11 +12,13 @@ Execute comprehensive research across any domain using adaptive agent orchestrat
 
 **CRITICAL**: This command defines how Claude executes research when the user runs `/deep-research [topic]` on Claude.
 
+**DOMAIN LANGUAGE WARNING**: Do NOT use implementation/technical language unless the research is specifically about HOW to build/implement something technical. Product research is about WHAT to buy, not how to implement. Historical research is about WHAT happened, not how to implement. Match your language to the research domain appropriately.
+
 ### **Claude's Direct Responsibilities:**
 1. **Phase 1**: Domain classification and adaptive planning with CCC framework integration
 2. **Phase 2**: Multi-agent research execution with flexible wave structure
 3. **Phase 3**: Comparative analysis synthesis with evidence evaluation
-4. **Phase 4**: Final research report generation with recommendations focus
+4. **Phase 4**: Domain-appropriate research report generation with contextually relevant recommendations
 
 ### **Agent Integration:**
 - **CCC-Web-Researcher**: Primary research agent for systematic investigation
@@ -47,10 +49,10 @@ Execute comprehensive research across any domain using adaptive agent orchestrat
 This command leverages the CCC Agent Component System with dynamic loading:
 
 #### **Core Components (Always Loaded)**
-- **@CCC/Agents/Agent.md**: Universal behavioral core and quality standards
-- **@CCC/Framework/Status-Tag-Codes.md**: Progress tracking and completion validation
-- **@CCC/Framework/Admiralty-Rating-Codes.md**: Source credibility assessment
-- **@CCC/Framework/Workflow-Core-Labels.md**: Systematic organization and discovery
+- **CCC/Agents/Agent.md**: Universal behavioral core and quality standards
+- **CCC/Framework/Status-Tag-Codes.md**: Progress tracking and completion validation
+- **CCC/Framework/Admiralty-Rating-Codes.md**: Source credibility assessment
+- **CCC/Framework/Workflow-Core-Labels.md**: Systematic organization and discovery
 
 #### **Contextual Components (Domain-Dependent)**
 - **@CCC/Framework/Domain-Detection-Quick-Reference.md**: Auto-detection logic for domain classification
@@ -58,9 +60,8 @@ This command leverages the CCC Agent Component System with dynamic loading:
 - **@CCC/Framework/Comparative-Analysis-Quick-Reference.md**: Systematic comparison framework
 - **@CCC/Framework/Validation-Quick-Reference.md**: Applied for academic/safety-critical research
 - **@CCC/Framework/Risk-Quick-Reference.md**: Loaded for practical/safety research
-- **@CCC/Standards/Enhanced-PRISMA.md**: Comprehensive validation for rigorous research
 - **@Templates/Template-Guide.md**: Smart template selection based on domain
-- **@Templates/Search-Strategies/Product-Research-Strategy.md**: Product domain research methodology
+- **Templates/Search-Strategies/Product-Research-Strategy.md**: Product domain research methodology
 
 ### **Research Domain Structure**
 - **Base Location**: `/Research/Active-Projects/Deep-Research/[research-stub]/`
@@ -203,14 +204,54 @@ OUTPUT REQUIREMENTS:
 [ ] Uncertainty factors: What could change the recommendation
 ```
 
-### **Phase 4: Research Report & Recommendations [DELIVERY]**
-**Duration**: 10-15 minutes | **Actionable Content**
+### **Phase 4: Domain-Appropriate Research Report [DELIVERY]**
+**Duration**: 10-15 minutes | **Contextually Relevant Content**
 
-**Report Generation Protocol**:
+**CRITICAL**: Report structure must match research domain. Do NOT use implementation language unless the research is about HOW to build/implement something technical.
+
+**Domain-Specific Report Structures**:
+
+#### **Product Domain** (What to buy/choose):
 1. **Executive Summary**: Key findings and primary recommendations
 2. **Comparative Analysis**: Clear option comparison with decision matrix
-3. **Evidence Summary**: Source quality assessment and confidence levels
-4. **Implementation Guidance**: Practical next steps and considerations
+3. **Purchase Recommendations**: Specific product/service recommendations with rationale
+4. **Cost-Benefit Analysis**: Value propositions and budget considerations
+5. **Purchasing Strategy**: Timing, sourcing, and acquisition guidance
+
+#### **Academic/Scientific Domain** (What research shows):
+1. **Executive Summary**: Key findings and scholarly consensus
+2. **Literature Synthesis**: Integration of research findings across sources
+3. **Evidence Analysis**: Source quality assessment and confidence levels
+4. **Research Gaps & Limitations**: Areas needing further investigation
+5. **Further Research Directions**: Suggested areas for continued study
+
+#### **Historical/Cultural Domain** (What happened/what it means):
+1. **Executive Summary**: Key events and historical significance
+2. **Historical Analysis**: Context, causes, and consequences
+3. **Evidence Assessment**: Source reliability and historical interpretation
+4. **Significance & Impact**: Long-term effects and contemporary relevance
+5. **Related Topics**: Connected events, figures, or themes for further exploration
+
+#### **Technical Domain** (How to implement/build) - ONLY when user asks HOW:
+1. **Executive Summary**: Key technical findings and recommendations
+2. **Technical Analysis**: System requirements and architectural considerations
+3. **Implementation Considerations**: Practical deployment guidance
+4. **Integration Requirements**: Dependencies and compatibility factors
+5. **Deployment Strategy**: Step-by-step implementation approach
+
+#### **Practical Domain** (How to do/accomplish):
+1. **Executive Summary**: Key methods and recommended approaches
+2. **Method Comparison**: Systematic evaluation of different approaches
+3. **Application Guidance**: Step-by-step practical instructions
+4. **Resource Requirements**: Tools, skills, and materials needed
+5. **Success Factors**: Critical elements for effective execution
+
+#### **Creative/Literary Domain** (What it means/significance):
+1. **Executive Summary**: Key themes and analytical insights
+2. **Critical Analysis**: Interpretation and significance across sources
+3. **Evidence Synthesis**: Scholarly consensus and debate areas
+4. **Cultural Context**: Historical and contemporary relevance
+5. **Related Works**: Connected literature, art, or cultural phenomena
 
 ## Quality Framework Integration
 
@@ -244,6 +285,13 @@ DOMAIN INTEGRATION:
 - Search Strategy: [appropriate strategy from Search-Strategies/]
 - Validation Tier: [selected from Validation-Tier-Selection-Quick-Reference.md]
 
+CRITICAL DOMAIN GUIDANCE:
+- Product Domain: Focus on WHAT to buy/choose, NOT how to implement
+- Academic Domain: Focus on WHAT research shows, NOT how to implement findings
+- Historical Domain: Focus on WHAT happened and significance, NOT implementation
+- Technical Domain: ONLY use implementation language when user asks HOW to build/implement
+- Use domain-appropriate language: purchase/acquisition (products), exploration (historical), further study (academic)
+
 RESEARCH EXECUTION:
 - Apply multi-phase methodology: Query Analysis → Strategic Gathering → Content Analysis → Documentation
 - Source standards: @CCC/Framework/Admiralty-Rating-Codes.md (B3+ minimum)
@@ -264,6 +312,10 @@ FRAMEWORK:
 - Search Strategy: Product-Research-Strategy (independent sources, bias detection)
 - Validation: Essential tier from Validation-Tier-Selection-Quick-Reference.md
 
+CRITICAL: This is PRODUCT research - focus on WHAT to buy/choose, NOT implementation.
+Use language appropriate for purchasing decisions: recommendations, cost-benefit, purchasing strategy.
+AVOID: Implementation readiness, deployment strategy, next steps for implementation.
+
 FOCUS: Product comparisons, market analysis, buying recommendations with systematic comparison framework."
 ```
 
@@ -278,6 +330,10 @@ FRAMEWORK:
 - Validation: Extended tier, @CCC/Standards/Enhanced-PRISMA.md for critical findings
 - Search Strategy: Academic-Research-Strategy (peer-reviewed focus)
 - Source minimum: A2 rating for key claims
+
+CRITICAL: This is ACADEMIC research - focus on WHAT research shows and scholarly consensus.
+Use language appropriate for academic findings: literature synthesis, research gaps, further study directions.
+AVOID: Implementation readiness, deployment strategy, next steps for implementation.
 
 FOCUS: Systematic literature review methodology, evidence hierarchy, expert validation."
 ```
@@ -335,9 +391,9 @@ FOCUS: Systematic literature review methodology, evidence hierarchy, expert vali
 [ ] Research objectives fully addressed with evidence
 ```
 
-## Implementation Success Criteria
+## Research Completion Standards
 
-### **Completion Requirements**
+### **Quality Completion Criteria**
 ```
 📋 Research Completion Validation:
 [ ] **MANDATORY**: Datetime compliance across all documents
@@ -348,6 +404,7 @@ FOCUS: Systematic literature review methodology, evidence hierarchy, expert vali
 [ ] Source quality meets domain-appropriate standards
 [ ] Template compliance maintained throughout research
 [ ] CCC framework components properly integrated
+[ ] Domain-appropriate report structure used (NOT implementation for non-technical domains)
 ```
 
 ### **Quality Metrics**
