@@ -51,6 +51,40 @@ Components can be composed into larger functional units, which can then be compo
 
 ## Component Types
 
+### **Agent Component Architecture Overview**
+
+```
+Agent
+├── Behavioral Components   [1]
+│   ├── systematic-researcher 
+│   ├── code-analyzer 
+│   └── content-synthesizer 
+├── Procedural Components   [2]
+│   ├── enhanced-prisma-validation
+│   ├── security-checklist-review
+│   └── ccc-framework-compliance
+├── Format Components       [3]
+│   ├── research-report-format
+│   ├── technical-guide-format
+│   └── executive-summary-format
+├── Personality Components  [4]
+│   ├── professional-analyst
+│   ├── collaborative-advisor
+│   └── technical-expert
+├── Integration Components  [5]
+│   ├── web-research-integration
+│   ├── codebase-analysis-integration
+│   └── documentation-system-integration
+├── Memory Components       [6]
+│   ├── session-persistence
+│   ├── knowledge-accumulation
+│   └── context-inheritance
+└── Validation Components   [7]
+    ├── admiralty-code-validation
+    ├── framework-compliance-check
+    └── output-quality-assurance
+```
+
 ### **Behavioral Components**
 Define the core intelligence and decision-making patterns of an agent. These components determine how an agent processes information, identifies patterns, and formulates responses.
 
