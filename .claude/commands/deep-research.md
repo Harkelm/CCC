@@ -1,550 +1,367 @@
 ---
 allowed-tools: [Read, Write, Edit, MultiEdit, Bash, Glob, TodoWrite, Task, mcp__sequential-thinking__sequentialthinking, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, WebSearch, WebFetch]
-description: "Comprehensive multi-agent research workflow with systematic validation and Enhanced PRISMA compliance"
+description: "Comprehensive multi-domain research workflow with adaptive framework integration and comparative analysis focus"
 ---
 
-# /deep-research - Systematic Multi-Agent Research Command
+# /deep-research - Universal Multi-Domain Research Command
 
 ## Purpose
-Execute comprehensive technical research workflows using multi-agent orchestration to provide structured, actionable technical information. Focuses on delivering technical blueprints, implementation patterns, and comparative analysis to enable informed decision-making. Produces concise research reports with practical technical content and clear implementation guidance.
+Execute comprehensive research across any domain using adaptive agent orchestration to provide structured, evidence-based analysis focusing on understanding options, recommendations, and the 'why' behind choices. Produces systematic research reports with comparative analysis to enable informed decision-making across academic, technical, product, historical, literary, scientific, and practical domains.
 
 ## BEHAVIORAL EXECUTION FLOW
 
 **CRITICAL**: This command defines how Claude executes research when the user runs `/deep-research [topic]` on Claude.
 
 ### **Claude's Direct Responsibilities:**
-1. **Phase 1**: Claude directly creates research-planning.md and directory structure
-2. **Phase 2**: Claude spawns CCC-Web-Researcher agents for individual [SEARCH-###] tasks
-3. **Phase 3**: Claude performs synthesis and validation of agent outputs
-4. **Phase 4**: Claude generates final research report and executive summary
+1. **Phase 1**: Domain classification and adaptive planning with CCC framework integration
+2. **Phase 2**: Multi-agent research execution with flexible wave structure
+3. **Phase 3**: Comparative analysis synthesis with evidence evaluation
+4. **Phase 4**: Final research report generation with recommendations focus
 
-### **Sub-Agent Responsibilities:**
-- CCC-Web-Researcher: Execute individual [SEARCH-###] search tasks as directed by Claude
-- Context7 integration: Library documentation research when applicable
-- **SUB-AGENTS CANNOT**: Run /deep-research command, spawn other agents, or coordinate research waves
-
-### **EXECUTION SEQUENCE:**
-```
-User: /deep-research [topic] [args]
-  ↓
-Claude: Creates research-planning.md + directory structure (Phase 1)
-  ↓
-Claude: Spawns CCC-Web-Researcher for [SEARCH-001], [SEARCH-002], [SEARCH-003] ([WAVE-001])
-  ↓
-Claude: Synthesizes [WAVE-001] → Spawns agents for [WAVE-002]
-  ↓
-Claude: Synthesizes [WAVE-002] → Spawns agents for [WAVE-003]
-  ↓
-Claude: Final synthesis and report generation (Phase 3-4)
-```
+### **Agent Integration:**
+- **CCC-Web-Researcher**: Primary research agent for systematic investigation
+- **general-purpose**: Supporting analysis and specialized research tasks
+- **Context7 integration**: Library/technical documentation when applicable
+- **Component System**: Modular CCC framework components loaded as needed
 
 ## Usage
 ```
-/deep-research [Research Prompt] [--output-format=md|pdf] [--scope=web|library|comprehensive] [--validation=standard|rigorous] [--parallel=simple|full|auto]
+/deep-research [Research Topic] [--domain=auto|academic|technical|product|practical|creative] [--scope=focused|comprehensive] [--output=analysis|recommendations|comparison]
 ```
 
 ## Arguments
-- `Research Prompt` - Detailed research question or topic specification with clear scope and objective definition
-- `--output-format` - Results document format (default: md) with comprehensive formatting and source documentation integration
-- `--scope` - Research domain focus (default: comprehensive) determining agent deployment strategy and resource allocation protocols
-- `--validation` - Quality control level (default: standard) with enhanced validation protocols and evidence verification requirements
-- `--parallel` - Parallelization strategy (default: auto) controlling agent deployment and task distribution
-  - `simple`: Sequential execution, one agent at a time for systematic progression
-  - `full`: Maximum parallelization, each [SEARCH-###] search task gets dedicated agent for comprehensive coverage
-  - `auto`: Intelligent chunking based on research complexity (10+ items trigger category-based grouping)
+- `Research Topic` - Any research question across domains requiring systematic investigation
+- `--domain` - Research domain classification (default: auto-detect)
+  - `auto`: Intelligent domain detection and template selection
+  - `academic`: Academic papers, literature, scientific research
+  - `technical`: Technology analysis, implementation options
+  - `product`: Product comparisons, market analysis, recommendations
+  - `practical`: How-to guides, skill development, procedural knowledge
+  - `creative`: Literary analysis, cultural studies, artistic research
+- `--scope` - Research comprehensiveness (default: comprehensive)
+- `--output` - Primary focus (default: analysis with recommendations)
 
-## CCC Vault Integration
+## CCC Framework Integration
+
+### **Modular Component System**
+This command leverages the CCC Agent Component System with dynamic loading:
+
+#### **Core Components (Always Loaded)**
+- **@CCC/Agents/Agent.md**: Universal behavioral core and quality standards
+- **@CCC/Framework/Status-Tag-Codes.md**: Progress tracking and completion validation
+- **@CCC/Framework/Admiralty-Rating-Codes.md**: Source credibility assessment
+- **@CCC/Framework/Workflow-Core-Labels.md**: Systematic organization and discovery
+
+#### **Contextual Components (Domain-Dependent)**
+- **@CCC/Framework/Domain-Detection-Quick-Reference.md**: Auto-detection logic for domain classification
+- **@CCC/Framework/Validation-Tier-Selection-Quick-Reference.md**: Smart validation tier assignment
+- **@CCC/Framework/Comparative-Analysis-Quick-Reference.md**: Systematic comparison framework
+- **@CCC/Framework/Validation-Quick-Reference.md**: Applied for academic/safety-critical research
+- **@CCC/Framework/Risk-Quick-Reference.md**: Loaded for practical/safety research
+- **@CCC/Standards/Enhanced-PRISMA.md**: Comprehensive validation for rigorous research
+- **@Templates/Template-Guide.md**: Smart template selection based on domain
+- **@Templates/Search-Strategies/Product-Research-Strategy.md**: Product domain research methodology
 
 ### **Research Domain Structure**
-This command creates projects within the CCC vault's Research domain structure:
-- **Base Location**: `/Research/Active-Projects/Deep-Research/`
-- **Results Integration**: Final reports can be moved to `/Research/Findings/` upon completion
-- **Source Archive**: Source materials archived in `/Research/References/` for future use
-- **Template Compliance**: Uses [[Templates/Documents/Research-Report-Template]] for consistency
-
-### **Framework Compliance**
-- **Enhanced PRISMA**: Follows [[CCC/Standards/Enhanced-PRISMA]] validation protocols
-- **AI Workflow**: Implements [[CCC/AI-Workflows/AI-Standards]] for human-AI collaboration
-- **Security**: Applies [[CCC/Security/]] classification and access controls
-- **Architecture**: Aligned with [[CCC/Architecture]] design principles
+- **Base Location**: `/Research/Active-Projects/Deep-Research/[research-stub]/`
+- **Framework Compliance**: Full CCC behavioral specifications
+- **Template Integration**: Dynamic template selection from Template-Guide.md
+- **Quality Standards**: Adaptive validation based on research domain
 
 ## Research Architecture Framework
 
-### **Phase 1: Research Planning & Infrastructure [CRITICAL]**
-**Duration**: 5-10 minutes | **Validation Tier**: Essential
+### **Phase 1: Domain Analysis & Adaptive Planning [FOUNDATION]**
+**Duration**: 5-10 minutes | **Framework Integration**: Essential
 
-**Objectives**:
-1. **Research Scope Analysis**: Parse research question for objectives, deliverables, and success criteria
-2. **Infrastructure Creation**: Automated workspace creation with organized structure
-3. **Template Strategy Planning**: Review [[Templates/Template-Guide]] and assign appropriate templates to [SEARCH-###] tasks
-4. **Strategy Development**: Agent assignment planning and multi-wave coordination protocols
-5. **Quality Gate Establishment**: Validation criteria definition with evidence requirements
-
-**Phase 1 Protocol**:
+**Domain Classification Protocol**:
 ```
-📋 Research Planning Checklist:
-[ ] **MANDATORY**: Current datetime obtained and recorded in 'YYYY-MM-DD HH:MM:SS CST' format
-[ ] Research scope clearly defined with measurable objectives
-[ ] Directory structure created at /Research/Active-Projects/Deep-Research/[stub]/
-[ ] Template guide reviewed ([[Templates/Template-Guide]]) for appropriate template selection
-[ ] [SEARCH-###] tasks assigned with specific templates (Research-Report-Template, Technical-Guide-Template, etc.)
-[ ] Research strategy documented with [SEARCH-###] task assignment plan
-[ ] Quality criteria established with Enhanced PRISMA compliance requirements
-[ ] Context packages prepared for agent deployment with template links
-[ ] Parallelization strategy selected based on research complexity
+📋 Research Domain Analysis:
+[ ] **MANDATORY**: Current datetime recorded in 'YYYY-MM-DD HH:MM:SS CST' format
+[ ] Research domain identified using @CCC/Framework/Domain-Detection-Quick-Reference.md
+[ ] Template selection from @Templates/Template-Guide.md based on domain
+[ ] Validation tier assignment using @CCC/Framework/Validation-Tier-Selection-Quick-Reference.md
+[ ] Component loading decisions based on research requirements
+[ ] Wave structure adaptation based on topic complexity
+[ ] Quality standards establishment per @CCC/Agents/Agent.md
 ```
 
-**Research Planning Structure (research-planning.md)**:
+**Domain Classification Matrix**:
+- **Academic**: Peer-reviewed research, literature analysis, scientific investigation
+- **Technical**: Technology evaluation, system analysis, implementation options
+- **Product**: Market research, product comparisons, buying guides
+- **Practical**: How-to analysis, skill development, procedural knowledge
+- **Creative**: Literary analysis, cultural studies, artistic research
+- **Historical**: Event analysis, timeline research, contextual studies
+- **Scientific**: Hypothesis investigation, data analysis, methodology research
+
+**Adaptive Template Selection**:
+```markdown
+Domain → Template Mapping (from @Templates/Template-Guide.md):
+- Academic: Research-Report-Template (Extended validation)
+- Technical: Technical-Guide-Template (Essential validation)
+- Product: Product-Analysis-Template (Essential validation)
+- Practical: Technical-Guide-Template (Essential + Safety if applicable)
+- Creative: Literature-Analysis-Template (Essential validation)
+- Multi-domain: Research-Report-Template (Extended validation)
+```
+
+**Planning Document Structure (research-planning.md)**:
 ```markdown
 # Research Planning: [Topic]
-*Created: [YYYY-MM-DD HH:MM:SS CST] - MANDATORY: Insert actual current datetime*
+*Created: [YYYY-MM-DD HH:MM:SS CST] - MANDATORY datetime*
 
-## Research Objectives
-[Clear, measurable research goals]
+## Domain Analysis
+**Primary Domain**: [Classification result]
+**Research Objective**: [Clear goal focusing on options/recommendations/why]
+**Scope Definition**: [Boundaries and constraints]
 
-## Search Task Breakdown
+## Component Integration
+**Templates**: [Selected from Template-Guide.md]
+**Validation**: [Essential/Extended/Comprehensive]
+**Components**: [Loaded framework components]
 
+## Wave Structure
 ### [WAVE-001]: Foundation Research
-- **[SEARCH-001]**: Broad topic exploration - academic papers, authoritative sources
-  - **Template**: [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Academic-Research-Strategy]]
-  - **Validation**: Extended (15-item)
-- **[SEARCH-002]**: Technical documentation - official docs, standards, specifications
-  - **Template**: [[Templates/Documents/Technical-Guide-Template]] or [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Technical-Documentation-Strategy]]
-  - **Validation**: Essential (10-item) to Extended (15-item)
-- **[SEARCH-003]**: Community insights - expert discussions, implementation experiences
-  - **Template**: [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Modern-Technology-Strategy]]
-  - **Validation**: Essential (10-item) to Extended (15-item)
+### [WAVE-002]: Deep Investigation
+### [WAVE-003]: Comparative Analysis
+### [Additional waves as needed based on complexity]
 
-### [WAVE-002]: Deep Dive Investigation
-- **[SEARCH-004]**: Gap-focused research - address deficiencies from [WAVE-001]
-  - **Template**: [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Academic-Research-Strategy]]
-  - **Validation**: Extended (15-item)
-- **[SEARCH-005]**: Implementation analysis - detailed technical approaches
-  - **Template**: [[Templates/Documents/Technical-Guide-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Technical-Documentation-Strategy]]
-  - **Validation**: Essential (10-item) to Extended (15-item)
-- **[SEARCH-006]**: Expert perspectives - professional opinions, case studies
-  - **Template**: [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Modern-Technology-Strategy]]
-  - **Validation**: Extended (15-item)
-
-### [WAVE-003]: Technical Comparison & Implementation Patterns
-- **[SEARCH-007]**: Comparative analysis - detailed comparison of alternative approaches with implementation examples
-  - **Template**: [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Modern-Technology-Strategy]]
-  - **Validation**: Extended (15-item)
-- **[SEARCH-008]**: Implementation patterns - concrete code examples, best practices, and integration details
-  - **Template**: [[Templates/Documents/Technical-Guide-Template]] or [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Technical-Documentation-Strategy]]
-  - **Validation**: Essential (10-item) to Extended (15-item)
-- **[SEARCH-009]**: Expert implementation insights - professional implementation patterns and technical recommendations
-  - **Template**: [[Templates/Documents/Research-Report-Template]]
-  - **Search Strategy**: [[Templates/Search-Strategies/Academic-Research-Strategy]]
-  - **Validation**: Extended (15-item)
-
-## Parallelization Strategy
-- **Mode**: [simple|full|auto] based on --parallel argument
-- **Agent Count**: [Estimated number of concurrent agents needed]
-- **Resource Requirements**: [Context and computational considerations]
-
-## Quality Standards
-- **Minimum Source Rating**: B3 Admiralty Code
-- **Validation Tier**: [Essential|Extended|Comprehensive]
-- **Cross-validation Requirements**: [Multi-source verification criteria]
-
-## Task Dependencies
-### [WAVE-001] Dependencies
-- **[SEARCH-001] → [SEARCH-004]**: Foundation research scope influences gap-focused research direction
-- **[SEARCH-002] → [SEARCH-005]**: Technical documentation analysis informs implementation approach
-- **[SEARCH-003] → [SEARCH-006]**: Community insights inform expert perspective focus areas
-
-### [WAVE-002] Dependencies
-- **[SEARCH-004] → [SEARCH-007]**: Gap analysis identifies areas requiring alternative approach research
-- **[SEARCH-005] → [SEARCH-008]**: Implementation analysis informs version/compatibility validation scope
-- **[SEARCH-006] → [SEARCH-009]**: Expert perspectives inform assumption challenge methodology
-
-### Cross-Wave Information Flow
-- **Prerequisite Information**: [Document specific information dependencies between waves]
-- **Context Sharing**: [Define how previous wave findings inform subsequent research]
-- **Integration Points**: [Identify where cross-task validation is required]
-```
-
-**Directory Structure Creation**:
-```
-/Research/Active-Projects/Deep-Research/[stub]/
-├── research-planning.md          # Initial planning and scope (Phase 1)
-├── research/                     # Agent workspace directory
-│   ├── wave-001/                 # Foundation research wave
-│   │   ├── SEARCH-001.md         # Broad topic exploration
-│   │   ├── SEARCH-002.md         # Technical documentation focus
-│   │   ├── SEARCH-003.md         # Community insights and implementation experiences
-│   │   └── wave-synthesis.md     # [WAVE-001] findings compilation
-│   ├── wave-002/                 # Deep dive investigation wave
-│   │   ├── SEARCH-004.md         # Gap-focused research
-│   │   ├── SEARCH-005.md         # Implementation analysis
-│   │   ├── SEARCH-006.md         # Expert perspectives
-│   │   └── wave-synthesis.md     # [WAVE-002] findings compilation
-│   └── wave-003/                 # Technical comparison & implementation patterns
-│       ├── SEARCH-007.md         # Comparative analysis with implementation examples
-│       ├── SEARCH-008.md         # Implementation patterns and technical details
-│       ├── SEARCH-009.md         # Expert implementation insights
-│       └── wave-synthesis.md     # [WAVE-003] findings compilation
-├── results.md                    # Main research report (Phase 4)
-└── executive-summary.md          # Condensed findings summary (Phase 4)
+## Search Task Framework
+[Dynamic SEARCH-### allocation - not limited to 3 per wave]
 ```
 
 ### **Phase 2: Multi-Agent Research Execution [TACTICAL]**
-**Duration**: 15-45 minutes | **Agent Coordination**: Parallel & Sequential
+**Duration**: 20-60 minutes | **Adaptive Scaling**
 
-**Multi-Wave Research Strategy with Parallel Task Execution**:
+**Flexible Wave Architecture**:
 
 #### **[WAVE-001]: Foundation Research**
-**Parallelization**: Based on --parallel mode and research complexity
+**Objective**: Establish foundational understanding and identify key areas
+**Search Tasks**: [SEARCH-001] through [SEARCH-00X] - scalable based on complexity
+
+**Agent Deployment Pattern**:
 ```
-[SEARCH-001] → CCC-Web-Researcher: Broad topic exploration, academic sources
-[SEARCH-002] → CCC-Web-Researcher: Technical documentation, official sources
-[SEARCH-003] → general-purpose + context7 (optional): Library/framework research
-Context Package: research-planning.md + [SEARCH-###] specific objectives + quality standards
+Task: CCC-Web-Researcher
+Context: "Execute [SEARCH-00X]: [specific research objective].
+
+FRAMEWORK INTEGRATION:
+- Apply @CCC/Framework/Admiralty-Rating-Codes.md (minimum B3 rating)
+- Use template: [domain-appropriate template from Template-Guide.md]
+- Search strategy: [domain-specific strategy from Search-Strategies/]
+- Validation tier: [Essential/Extended/Comprehensive from Validation-Tier-Selection]
+
+RESEARCH FOCUS:
+- Understand 'why' options exist and their comparative advantages
+- Evidence-based analysis with source quality assessment
+- Gap identification for subsequent wave planning
+
+OUTPUT REQUIREMENTS:
+- MANDATORY: Include current datetime in YYYY-MM-DD HH:MM:SS CST format
+- Write to /research/wave-001/SEARCH-[number].md
+- Follow CCC-Web-Researcher methodology with structured documentation"
 ```
 
-#### **[WAVE-002]: Deep Dive Investigation**
-**Parallelization**: Build upon [WAVE-001] findings with targeted research
-```
-[SEARCH-004] → CCC-Web-Researcher: Gap-focused research addressing [WAVE-001] deficiencies
-[SEARCH-005] → general-purpose + context7 (optional): Implementation analysis, technical deep dive
-[SEARCH-006] → CCC-Web-Researcher: Expert perspectives, specialized sources
-Context Package: [WAVE-001] synthesis + gap analysis + [SEARCH-###] targeted objectives
-```
+#### **[WAVE-002]: Deep Investigation**
+**Objective**: Detailed analysis of specific areas identified in WAVE-001
+**Search Tasks**: Gap-focused research addressing foundation limitations
+**Scaling**: Additional search tasks as needed based on WAVE-001 findings
 
-#### **[WAVE-003]: Technical Comparison & Implementation Patterns**
-**Parallelization**: Comparative analysis and implementation pattern research
-```
-[SEARCH-007] → CCC-Web-Researcher: Comparative analysis with implementation examples
-[SEARCH-008] → general-purpose + context7 (optional): Implementation patterns and technical details
-[SEARCH-009] → CCC-Web-Researcher: Expert implementation insights and professional patterns
-Context Package: [WAVE-001-002] synthesis + comparative analysis requirements + implementation focus
-```
+#### **[WAVE-003]: Comparative Analysis [MANDATORY]**
+**Objective**: Systematic comparison of alternatives with decision framework
+**Search Tasks**: Focused on comparative evaluation and recommendation synthesis using @CCC/Framework/Comparative-Analysis-Quick-Reference.md
+**Output**: Clear comparison matrices and decision-making guidance following systematic comparison structure
 
-**Parallelization Modes**:
-- **simple**: Execute [SEARCH-###] tasks sequentially within each wave
-- **full**: Each [SEARCH-###] task gets dedicated agent (maximum parallelization)
-- **auto**: Intelligent grouping based on research complexity (10+ items → category-based chunks)
+**Additional Waves**: Scale beyond 3 waves for complex research requiring specialized investigation phases
 
 **Agent Context Package Requirements**:
-- **Timestamp Protocol**: MANDATORY requirement to include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in all [SEARCH-###] documents
-- **Enhanced PRISMA Template**: Systematic validation framework from [[CCC/Standards/Enhanced-PRISMA]]
-- **Research Planning Context**: Current research-planning.md contents with [SEARCH-###] task assignments
-- **Template Specifications**: Specific template link for [SEARCH-###] task (e.g., [[Templates/Documents/Research-Report-Template]])
-- **Search Strategy Templates**: Assigned search strategy template for [SEARCH-###] task (e.g., [[Templates/Search-Strategies/Academic-Research-Strategy]])
-- **Admiralty Code Standards**: Source credibility assessment requirements (B3+ minimum)
-- **CCC Behavioral Specifications**: Quality and validation standards from [[CLAUDE]]
-- **Wave-Specific Objectives**: Targeted research goals and gap identification
-- **Template Validation Requirements**: Quality standards from assigned template (Essential/Extended validation tier)
+- **@CCC/Agents/Agent.md**: Core behavioral specifications and quality standards
+- **Research Planning Context**: Current wave objectives and findings from previous waves
+- **Template Specifications**: Domain-appropriate template from Template-Guide.md
+- **Search Strategy**: Domain-specific methodology from Search-Strategies/ directory
+- **Validation Requirements**: Tier from Validation-Tier-Selection-Quick-Reference.md
+- **Admiralty Standards**: Source credibility requirements from Admiralty-Rating-Codes.md
+- **Comparative Framework**: Comparative-Analysis-Quick-Reference.md for Wave 3 tasks
+- **Progress Tracking**: Status indicators from Status-Tag-Codes.md
 
-**Inter-Wave Validation Checkpoints**:
-```
-📋 Wave Completion Validation:
-[ ] [WAVE-001]: Initial findings documented with source quality assessment and template compliance
-[ ] [WAVE-002]: Deep dive completed with targeted gap resolution and template validation
-[ ] [WAVE-003]: Comprehensive validation with alternative perspective analysis and template standards
-[ ] Cross-Validation: Agent findings consistency analysis completed
-[ ] Template Compliance: All [SEARCH-###] outputs follow assigned templates (Research-Report-Template, Technical-Guide-Template)
-[ ] Validation Tier Compliance: All [SEARCH-###] tasks meet assigned validation requirements (Essential/Extended)
-[ ] Quality Control: All sources meet minimum B3 Admiralty Code rating
-```
-
-
-### **Phase 3: Technical Synthesis & Report Generation [FOCUS]**
-**Duration**: 10-20 minutes | **Technical Content Focus**
+### **Phase 3: Comparative Synthesis & Analysis [FOCUS]**
+**Duration**: 10-25 minutes | **Decision-Oriented**
 
 **Synthesis Protocol**:
-1. **Technical Findings Compilation**: Organize all research into actionable technical content
-2. **Implementation Pattern Analysis**: Extract concrete implementation patterns and code examples
-3. **Comparative Analysis**: Synthesize comparisons between different approaches
-4. **Technical Decision Framework**: Provide structured information for technical decision-making
+1. **Evidence Integration**: Systematic compilation using @CCC/Framework/Admiralty-Rating-Codes.md
+2. **Comparative Framework**: Structured comparison of alternatives with pros/cons analysis
+3. **Recommendation Development**: Evidence-based recommendations with rationale
+4. **Quality Validation**: Application of appropriate validation tier
 
-**Quality Standards**:
+**Comparative Analysis Standards**:
 ```
-📋 Research Quality Checklist:
-[ ] Technical information clearly organized and actionable
-[ ] Implementation patterns include concrete examples
-[ ] Comparative analysis provides structured decision-making information
-[ ] Sources meet minimum credibility standards (B3+ when applicable)
-[ ] Results focus on technical content rather than process documentation
+📋 Comparative Analysis Checklist (from @CCC/Framework/Comparative-Analysis-Quick-Reference.md):
+[ ] Options identification: 3-5 main alternatives including status quo
+[ ] Evaluation criteria: 4-6 most important factors (cost, complexity, performance, risk, time, compatibility)
+[ ] Comparison matrix: Systematic scoring with evidence backing
+[ ] Recommendation logic: Best for specific contexts with clear reasoning
+[ ] Decision framework: High/medium/low stakes mapping to evidence requirements
+[ ] Uncertainty factors: What could change the recommendation
 ```
 
-### **Phase 4: Final Report Generation [DELIVERY]**
-**Duration**: 5-10 minutes | **Technical Content Focus**
+### **Phase 4: Research Report & Recommendations [DELIVERY]**
+**Duration**: 10-15 minutes | **Actionable Content**
 
 **Report Generation Protocol**:
-1. **Technical Content Organization**: Structure all research into clear, actionable format
-2. **Results Document Creation**: Comprehensive technical report with implementation guidance
-3. **Executive Summary**: Concise summary with key technical findings and recommendations
-4. **Implementation Focus**: Ensure results provide technical blueprints rather than process documentation
+1. **Executive Summary**: Key findings and primary recommendations
+2. **Comparative Analysis**: Clear option comparison with decision matrix
+3. **Evidence Summary**: Source quality assessment and confidence levels
+4. **Implementation Guidance**: Practical next steps and considerations
 
-## Technical Quality Framework
+## Quality Framework Integration
 
-### **Source Quality Guidelines**
-```
-Technical Source Priority:
-- Official documentation and specifications (highest priority)
-- Professional implementation examples and patterns
-- Expert technical opinions and recommendations
-- Community validation and real-world usage examples
-- Avoid marketing materials and unsubstantiated claims
-```
+### **Source Quality Standards (from @CCC/Framework/Admiralty-Rating-Codes.md)**
+- **Minimum Standard**: B3 rating for most research
+- **Academic Research**: A2 minimum for critical claims
+- **Safety-Critical**: A1 preferred with independent verification
+- **Product Research**: B2 minimum with bias assessment
 
-### **Research Output Standards**
+### **Validation Integration (from @CCC/Framework/Validation-Quick-Reference.md)**
 ```
-📋 Technical Content Requirements:
-[ ] Technical accuracy with credible sources
-[ ] Concrete implementation examples where applicable
-[ ] Clear comparison matrices for alternative approaches
-[ ] Actionable technical information for decision-making
-[ ] Focus on "how to build" rather than "why you might fail"
+Domain-Based Validation Assignment:
+- Academic/Scientific: Extended (15-item) validation
+- Technical/Product: Essential (10-item) validation
+- Safety/Medical: Comprehensive (27-item) validation
+- Creative/Cultural: Essential (10-item) validation
 ```
 
 ## Agent Deployment Patterns
 
-### **CCC-Web-Researcher Configuration**
-**Primary Capabilities**: WebSearch, WebFetch, Write, Edit, MultiEdit, systematic source analysis with CCC quality standards
-**Context Package Requirements**:
-- Research planning context with specific objectives
-- Source quality standards (B3+ minimum)
-- Search strategy with coverage criteria
-- Admiralty Code assessment requirements
-
-**Deployment Examples**:
-
-**Sequential Execution (--parallel=simple)**:
+### **Smart Agent Selection**
+**Primary Pattern - CCC-Web-Researcher**:
 ```
 Task: CCC-Web-Researcher
-Context: "Execute [SEARCH-001]: [specific search objective]. Research [topic] using systematic web search. Apply Admiralty Code ratings (B3+ required). MANDATORY: Include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in document header. Write findings to /research/wave-001/SEARCH-001.md using [[Templates/Documents/Research-Report-Template]]. Apply Extended (15-item) validation. Follow research-planning.md objectives for this task."
+Description: "Comprehensive [domain] research with structured methodology"
+Context: "Execute systematic research using CCC-Web-Researcher methodology:
+
+DOMAIN INTEGRATION:
+- Domain: [detected from Domain-Detection-Quick-Reference.md]
+- Template: [selected from Template-Guide.md mapping]
+- Search Strategy: [appropriate strategy from Search-Strategies/]
+- Validation Tier: [selected from Validation-Tier-Selection-Quick-Reference.md]
+
+RESEARCH EXECUTION:
+- Apply multi-phase methodology: Query Analysis → Strategic Gathering → Content Analysis → Documentation
+- Source standards: @CCC/Framework/Admiralty-Rating-Codes.md (B3+ minimum)
+- Focus: Understand options and WHY they exist, evidence-based recommendations
+- Quality framework: Enhanced PRISMA validation as appropriate
+
+Write structured documentation to designated wave/search file."
 ```
 
-**Parallel Execution (--parallel=full)**:
+**Product Research Pattern**:
 ```
-# Agent 1
 Task: CCC-Web-Researcher
-Context: "Execute [SEARCH-001]: [objective]. MANDATORY: Include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in document header. Use [[Templates/Documents/Research-Report-Template]]. Apply Extended (15-item) validation. Write to /research/wave-001/SEARCH-001.md"
+Description: "Product research with specialized methodology"
+Context: "Product domain research using @Templates/Search-Strategies/Product-Research-Strategy.md:
 
-# Agent 2 (concurrent)
+FRAMEWORK:
+- Template: Product-Analysis-Template
+- Search Strategy: Product-Research-Strategy (independent sources, bias detection)
+- Validation: Essential tier from Validation-Tier-Selection-Quick-Reference.md
+
+FOCUS: Product comparisons, market analysis, buying recommendations with systematic comparison framework."
+```
+
+**Academic Research Pattern**:
+```
 Task: CCC-Web-Researcher
-Context: "Execute [SEARCH-002]: [objective]. MANDATORY: Include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in document header. Use [[Templates/Documents/Technical-Guide-Template]] or [[Templates/Documents/Research-Report-Template]]. Apply Essential (10-item) to Extended (15-item) validation. Write to /research/wave-001/SEARCH-002.md"
+Description: "Academic research with Enhanced PRISMA compliance"
+Context: "Academic investigation using comprehensive validation:
 
-# Agent 3 (concurrent)
-Task: general-purpose
-Context: "Execute [SEARCH-003]: [objective]. MANDATORY: Include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in document header. Use [[Templates/Documents/Research-Report-Template]]. Apply Essential (10-item) to Extended (15-item) validation. Use Context7 if needed. Write to /research/wave-001/SEARCH-003.md"
+FRAMEWORK:
+- Template: Research-Report-Template
+- Validation: Extended tier, @CCC/Standards/Enhanced-PRISMA.md for critical findings
+- Search Strategy: Academic-Research-Strategy (peer-reviewed focus)
+- Source minimum: A2 rating for key claims
+
+FOCUS: Systematic literature review methodology, evidence hierarchy, expert validation."
 ```
 
-**Auto Execution (--parallel=auto)**:
+## Advanced Research Patterns
+
+### **Cross-Domain Research**
 ```
-# Category-based grouping for 10+ search tasks
-Task: CCC-Web-Researcher
-Context: "Execute search cluster [[SEARCH-001], [SEARCH-002], [SEARCH-004]]: [grouped objectives]. MANDATORY: Include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in all document headers. Use templates as specified in research-planning.md for each [SEARCH-###] task (Research-Report-Template, Technical-Guide-Template, etc.). Apply appropriate validation tiers (Essential/Extended). Write separate files for each task in appropriate wave directories."
+/deep-research "integration of X and Y for Z purpose" --domain=auto --scope=comprehensive
 ```
+- Automatic domain detection for complex topics
+- Multi-template integration approach
+- Enhanced comparative analysis across domains
 
-### **General-Purpose + Context7 Configuration (Optional)**
-**Primary Capabilities**: Context7 library research (optional), technical documentation analysis, implementation research
-**Context Package Requirements**:
-- Library identification and resolution protocols
-- Technical documentation analysis standards
-- Version validation and compatibility requirements
-- Implementation guidance with code examples
-
-**Deployment Example**:
+### **Academic Literature Research**
 ```
-Task: general-purpose
-Context: "Research [technical topic]. MANDATORY: Include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format in document header. Use Context7 for library documentation if applicable and available. Validate implementation approaches with working code examples. Apply technical validation standards. Document compatibility matrix and version requirements. Write findings to designated [SEARCH-###] file."
+/deep-research "systematic review of [academic topic]" --domain=academic --scope=comprehensive
 ```
+- Enhanced PRISMA compliance loading
+- A1-A2 source preference with peer-review focus
+- Extended validation protocols
 
-### **Sequential Thinking Integration**
-**Use Cases**: Complex research logic, assumption challenge, evidence synthesis
-**Context Package Requirements**:
-- Multi-step research problems requiring systematic analysis
-- Evidence-based decision making with assumption challenge
-- Complex synthesis requiring logical progression
-
-## Parallel Execution Quality Control & Synthesis Protocols
-
-### **Inter-Agent Coordination**
-
-#### **Task Overlap Prevention**
-- **Search Scope Verification**: Each [SEARCH-###] task has clearly defined, non-overlapping objectives
-- **Source Deduplication**: Agents document sources to prevent redundant research
-- **Progress Monitoring**: Real-time tracking of [SEARCH-###] task completion status
-- **Context Sharing**: Agents reference previous [SEARCH-###] findings to avoid duplication
-
-#### **Quality Consistency Across Agents**
-- **Standardized Output Format**: All agents follow identical documentation templates
-- **Admiralty Code Consistency**: Uniform source rating application across all [SEARCH-###] tasks
-- **Validation Synchronization**: Common quality thresholds maintained across parallel execution
-- **Cross-Agent Validation**: Agents cross-reference findings for consistency verification
-
-### **Wave Synthesis Protocols**
-
-#### **[SEARCH-###] Results Compilation**
-```markdown
-# Wave Synthesis Process
-1. **Individual Task Review**: Validate each [SEARCH-###] file for completeness and quality
-2. **Source Quality Assessment**: Aggregate Admiralty Code ratings across all wave tasks
-3. **Finding Integration**: Combine discoveries into coherent wave summary
-4. **Gap Identification**: Document areas requiring additional research
-5. **Quality Metrics**: Calculate wave-level quality indicators
-
-# Wave Synthesis File Structure (/research/wave-X/wave-synthesis.md)
-## Wave [X] Summary
-### Completed Tasks
-- **[SEARCH-00X]**: [Brief summary] | **Quality**: [Average rating] | **Status**: [Complete/Partial]
-
-### Key Findings
-[Synthesized discoveries organized by theme/relevance]
-
-### Source Quality Matrix
-| Task | Sources | Avg Rating | Quality Notes |
-|------|---------|------------|---------------|
-| SEARCH-001| 5       | B2         | Strong academic sources |
-
-### Research Gaps Identified
-[Areas requiring follow-up research]
-
-### Next Wave Recommendations
-[Specific objectives for subsequent research waves]
+### **Product/Technology Analysis**
 ```
-
-#### **Quality Assurance Checkpoints**
+/deep-research "best options for [need/goal]" --domain=product --output=recommendations
 ```
-📋 Wave Completion Validation:
-[ ] All [SEARCH-###] tasks completed with evidence documentation
-[ ] Template compliance verified for all [SEARCH-###] outputs (Research-Report-Template, Technical-Guide-Template)
-[ ] Validation tier requirements met for all [SEARCH-###] tasks (Essential/Extended as specified)
-[ ] Source quality meets minimum B3 threshold across all tasks
-[ ] No critical research gaps remain unaddressed within wave scope
-[ ] Cross-agent findings consistency verified
-[ ] Wave synthesis document complete with quality metrics
-[ ] Context prepared for subsequent wave or final synthesis
+- Market analysis with comparative matrices
+- Cost-benefit evaluation frameworks
+- User experience and practical considerations
+
+### **Historical/Cultural Research**
 ```
-
-### **Final Synthesis Integration**
-
-#### **Multi-Wave Consolidation**
-- **Evidence Triangulation**: Validate findings across multiple waves and sources
-- **Conflict Resolution**: Address contradictory findings with systematic analysis
-- **Confidence Assessment**: Assign confidence levels based on source quality and consensus
-- **Comprehensive Gap Analysis**: Identify overall research limitations and areas for future work
-
-#### **Quality Control Dashboard**
-```markdown
-# Research Quality Dashboard
-## Overall Metrics
-- **Total [SEARCH-###] Tasks**: [X] | **Completed**: [Y] | **Success Rate**: [Z%]
-- **Average Source Quality**: [Rating] | **Total Sources**: [Count]
-- **Cross-Validation Rate**: [Percentage] | **Conflict Resolution**: [Count]
-
-## Wave Performance
-| Wave | Tasks | Completion | Avg Quality | Key Issues |
-|------|-------|------------|-------------|------------|
-| 1    | 3     | 100%       | A2          | None       |
-| 2    | 3     | 100%       | B3          | Version conflicts |
-| 3    | 3     | 67%        | B2          | Expert source limited |
-
-## Quality Flags
-[ ] All waves meet minimum quality thresholds
-[ ] No unresolved source conflicts
-[ ] Research objectives fully addressed
-[ ] Expert review completed where required
+/deep-research "analysis of [historical/cultural topic]" --domain=creative --scope=comprehensive
 ```
+- Cultural context and significance analysis
+- Multiple perspective integration
+- Timeline and causation analysis
 
-### **Resource Management for Parallel Execution**
+## Error Recovery & Quality Assurance
 
-#### **Agent Workload Distribution**
-- **Auto Mode Intelligence**: Algorithm for optimal task clustering based on complexity
-- **Resource Constraint Awareness**: Consideration of computational and time limitations
-- **Dynamic Load Balancing**: Redistribution of [SEARCH-###] tasks based on agent performance
-- **Failure Recovery**: Automatic reassignment of failed [SEARCH-###] tasks to available agents
+### **Agent Failure Protocols (from @CCC/Framework/Emergency-Escalation-Procedures.md)**
+- **Retry with Modified Parameters**: Automatic adjustment for transient failures
+- **Alternative Agent Deployment**: Backup strategy with general-purpose agents
+- **Quality Degradation Documentation**: Clear impact assessment and limitations
 
-#### **Context Token Optimization**
-- **Incremental Context Building**: Progressive context enhancement across waves
-- **Essential Information Distillation**: Key findings summary for efficient context transfer
-- **Token Budget Management**: Monitoring and optimization of context size across agents
-- **Priority Information Hierarchy**: Critical findings prioritized in context packages
-
-## Error Handling & Recovery Protocols
-
-### **Agent Failure Recovery**
-- **Automatic Retry**: Modified parameters for transient failures
-- **Alternative Deployment**: Agent substitution for persistent failures
-- **Manual Continuation**: Protocols for critical research components
-- **Quality Degradation**: Documentation with impact assessment
-
-### **Source Validation Failure Protocols**
-- **Alternative Identification**: Source validation with quality assessment
-- **Expert Consultation**: Escalation for critical information gaps
-- **Confidence Adjustment**: Level modification with limitation documentation
-- **Scope Modification**: Research boundary adjustment with stakeholder approval
+### **Quality Control Integration**
+```
+📋 Research Quality Validation (from @CCC/Agents/Agent.md):
+[ ] **MANDATORY**: All documents include actual current datetime
+[ ] All sources meet minimum Admiralty Code ratings
+[ ] Template compliance verified for all outputs
+[ ] Comparative analysis completed with clear recommendations
+[ ] Evidence hierarchy established with confidence levels
+[ ] Cross-validation performed where applicable
+[ ] Research objectives fully addressed with evidence
+```
 
 ## Implementation Success Criteria
 
-### **Technical Completion Requirements**
+### **Completion Requirements**
 ```
-📋 Research Completion Checklist:
-[ ] **MANDATORY**: All documents include actual current datetime in 'YYYY-MM-DD HH:MM:SS CST' format
-[ ] Complete technical research report with actionable implementation guidance
-[ ] All [SEARCH-###] tasks completed with technical focus
-[ ] Comparative analysis includes concrete examples and implementation patterns
-[ ] Technical decision-making information clearly structured
-[ ] Executive summary highlights key technical findings and recommendations
-[ ] Results focus on technical blueprints rather than validation processes
+📋 Research Completion Validation:
+[ ] **MANDATORY**: Datetime compliance across all documents
+[ ] Foundation research establishes comprehensive knowledge base
+[ ] Deep investigation addresses specific questions and gaps
+[ ] Comparative analysis provides clear option evaluation
+[ ] Recommendations supported by evidence with confidence levels
+[ ] Source quality meets domain-appropriate standards
+[ ] Template compliance maintained throughout research
+[ ] CCC framework components properly integrated
 ```
 
-### **Technical Quality Metrics**
-- **Implementation Focus**: Research provides concrete technical guidance
-- **Comparative Analysis**: Clear comparison of alternative approaches with examples
-- **Source Credibility**: Technical information from reliable sources
-- **Actionable Content**: Results enable informed technical decision-making
-
-## Advanced Deployment Patterns
-
-### **Academic Research Focus**
-```
-/deep-research "systematic review of [topic]" --scope comprehensive --validation rigorous
-```
-- Enhanced focus on peer-reviewed sources (A1-A2 preference)
-- Extended validation with 15-item Enhanced PRISMA compliance
-- Expert consultation for critical findings
-
-### **Technical Implementation Research**
-```
-/deep-research "best practices for [technology]" --scope library --validation standard
-```
-- Context7 integration for official documentation
-- Working code examples with validation requirements
-- Implementation comparison with decision matrix
-
-### **Industry Analysis Research**
-```
-/deep-research "market trends in [domain]" --scope web --validation standard
-```
-- Expert opinion focus with credential verification
-- Trend analysis with multiple perspective validation
-- Professional source preference with bias assessment
-
-## Framework Integration
-
-**CCC Integration**: Compatible with Context Command Center framework and research domain structure
-**Technical Focus**: Emphasizes actionable technical content over process validation
-**Implementation Guidance**: Provides concrete technical blueprints for informed decision-making
-**Quality Standards**: Maintains source credibility while prioritizing technical utility
+### **Quality Metrics**
+- **Domain Adaptation**: Appropriate template and validation selection
+- **Comparative Analysis**: Clear option comparison with decision support
+- **Evidence Quality**: Source credibility meeting minimum standards
+- **Recommendation Focus**: Actionable insights with supporting rationale
+- **Framework Integration**: Proper CCC component utilization
 
 ---
 
-**Command Version**: 1.0.0 | **Framework**: CCC-Compatible
-**Evidence Rating**: A1 (Framework standards with systematic validation)
-**Compliance**: Enhanced PRISMA + ISO 31000 + CIS Controls + CCC Behavioral Specifications
-**Vault Integration**: Compatible with CCC Research domain structure
+**Command Version**: 2.0.0 | **Framework**: CCC Universal Research System
+**Evidence Rating**: A1 (Modular framework with comprehensive domain coverage)
+**Compliance**: CCC Agent Component System + Enhanced PRISMA + ISO 31000 Integration
+**Architecture**: Universal Domain Research with Adaptive Component Loading
 
-*Technical research excellence through multi-agent coordination focused on actionable implementation guidance and comparative analysis integrated with the Context Command Center framework.*
+*Comprehensive research excellence through adaptive framework integration, focusing on understanding options and providing evidence-based recommendations across all knowledge domains.*

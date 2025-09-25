@@ -21,7 +21,7 @@ This file contains the complete universal behavioral specification including:
 
 ---
 
-## Modular Framework Components
+## Modular Agent Component System (ACS)
 
 ### ⚡ **Quick References** (High-Level Operations)
 - **Status Classifications**: `CCC/Framework/Status-Tag-Codes.md`

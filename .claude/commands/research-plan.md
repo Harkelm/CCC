@@ -33,14 +33,19 @@ Claude: Research proposal finalization ([PHASE-004])
 
 ## Usage
 ```
-/research-plan [Research Query] [--priority=high|medium|comprehensive] [--depth=overview|detailed|exhaustive] [--focus=academic|technical|practical] [--integration=standalone|deep-research]
+/research-plan [Research Query] [--priority=high|medium|comprehensive] [--depth=overview|detailed|exhaustive] [--focus=auto|academic|technical|product|practical|creative] [--integration=standalone|deep-research]
 ```
 
 ## Arguments
 - `Research Query` - Complex research question or topic requiring systematic breakdown and planning
 - `--priority` - Planning depth level (default: detailed) determining [TOPIC-###] granularity and analysis depth
 - `--depth` - Analysis comprehensiveness (default: detailed) controlling investigation scope per topic
-- `--focus` - Research orientation (default: technical) influencing topic categorization and methodology
+- `--focus` - Research orientation (default: auto-detect) influencing topic categorization and methodology
+  - `academic`: Academic papers, literature, scientific research
+  - `technical`: Technology analysis, implementation options
+  - `product`: Product comparisons, market analysis, recommendations
+  - `practical`: How-to guides, skill development, procedural knowledge
+  - `creative`: Literary analysis, cultural studies, artistic research
 - `--integration` - Integration strategy (default: deep-research) for subsequent workflow coordination
   - `standalone`: Independent research planning document
   - `deep-research`: Optimized for `/deep-research` command integration with compatible formatting
@@ -51,10 +56,14 @@ Claude: Research proposal finalization ([PHASE-004])
 This command creates planning documents within the CCC vault's Research domain structure:
 - **Planning Location**: `/Research/Active-Projects/Deep-Research/`
 - **Integration Path**: Creates comprehensive research-proposal.md ready for `/deep-research` execution
-- **Template Compliance**: Uses [[Templates/Documents/Research-Report-Template]] for structured output
+- **Template Compliance**: Uses domain-appropriate templates from [[Templates/Template-Guide]] for structured output
 - **Framework Alignment**: Full CCC framework compliance with systematic validation
 
 ### **Framework Compliance**
+- **Domain Detection**: Systematic domain classification using [[CCC/Framework/Domain-Detection-Quick-Reference]]
+- **Template Selection**: Adaptive template assignment via [[Templates/Template-Guide]]
+- **Validation Tiers**: Systematic tier selection using [[CCC/Framework/Validation-Tier-Selection-Quick-Reference]]
+- **Comparative Framework**: Integration with [[CCC/Framework/Comparative-Analysis-Quick-Reference]]
 - **Enhanced PRISMA**: Planning-phase validation protocols from [[CCC/Standards/Enhanced-PRISMA]]
 - **AI Workflow**: Implements [[CCC/AI-Workflows/AI-Standards]] for systematic planning
 - **Security**: Applies [[CCC/Security/]] classification for sensitive research topics
@@ -67,7 +76,7 @@ This command creates planning documents within the CCC vault's Research domain s
 
 **Objectives**:
 1. **Query Decomposition**: Break down complex research question into core components
-2. **Domain Classification**: Identify primary and secondary research domains (Technical, Academic, Practical, etc.)
+2. **Domain Classification**: Identify primary and secondary research domains (academic, technical, product, practical, creative)
 3. **Scope Boundary Definition**: Establish clear research boundaries and limitations
 4. **Context Assessment**: Analyze hardware, software, and environmental constraints
 5. **Integration Requirements**: Determine compatibility with existing research and systems
@@ -77,7 +86,7 @@ This command creates planning documents within the CCC vault's Research domain s
 📋 Query Analysis Checklist:
 [ ] **MANDATORY**: Current datetime obtained and recorded in 'YYYY-MM-DD HH:MM:SS CST' format
 [ ] Research question core components identified and documented
-[ ] Primary research domain classified (Technical, Academic, Literature, Survival, etc.)
+[ ] Primary research domain classified using @CCC/Framework/Domain-Detection-Quick-Reference.md
 [ ] Secondary/supporting domains identified with relevance assessment
 [ ] Scope boundaries clearly defined with inclusion/exclusion criteria
 [ ] Hardware/software context constraints documented (RTX 4070, 20-core CPU, 32GB RAM, etc.)
@@ -96,7 +105,7 @@ This command creates planning documents within the CCC vault's Research domain s
 **Sub-Questions**: [Supporting questions that address different aspects]
 
 ## Domain Classification
-**Primary Domain**: [Technical/Academic/Literature/Survival/etc.]
+**Primary Domain**: [academic/technical/product/practical/creative]
 **Supporting Domains**: [Related areas requiring investigation]
 **Complexity Level**: [Basic/Intermediate/Advanced/Expert]
 
@@ -197,7 +206,7 @@ Low Priority ([TOPIC-013] to [TOPIC-018]):
 ### Integration Assessment
 **CCC Framework Alignment**: [How research aligns with existing CCC content]
 **Deep-Research Compatibility**: [Preparation for subsequent /deep-research execution]
-**Template Compatibility**: [Template assignments for each priority tier]
+**Template Compatibility**: [Template assignments from @Templates/Template-Guide.md based on domain classification]
 ```
 
 ### **[PHASE-004]: Research Proposal Finalization [DELIVERY]**
@@ -260,7 +269,7 @@ The comprehensive `research-proposal.md` serves as the complete planning documen
 ## Query Analysis
 **Primary Research Question**: [Core research objective]
 **Sub-Questions**: [Supporting questions that address different aspects]
-**Domain Classification**: [Technical/Academic/Literature/Survival/etc.]
+**Domain Classification**: [academic/technical/product/practical/creative]
 **Complexity Level**: [Basic/Intermediate/Advanced/Expert]
 
 ## Scope Definition
@@ -319,6 +328,13 @@ The comprehensive `research-proposal.md` serves as the complete planning documen
 **Deep-Research Compatibility**: [Preparation for /deep-research execution]
 **Quality Standards**: [Validation tier assignments for each priority level]
 
+### Framework Integration Specifications
+**Domain Classification**: [Primary domain from Domain-Detection-Quick-Reference.md]
+**Template Assignment**: [Selected from Template-Guide.md based on domain]
+**Search Strategy**: [Domain-appropriate strategy from Search-Strategies/ directory]
+**Validation Tier**: [Essential/Extended/Comprehensive from Validation-Tier-Selection-Quick-Reference.md]
+**Comparative Framework**: [Integration with Comparative-Analysis-Quick-Reference.md for systematic comparison]
+
 ## Implementation Strategy
 
 ### Research Methodology
@@ -326,7 +342,7 @@ The comprehensive `research-proposal.md` serves as the complete planning documen
 
 ### Quality Assurance Framework
 **Minimum Source Rating**: B3 Admiralty Code
-**Validation Tier**: [Essential|Extended|Comprehensive]
+**Validation Tier**: [Selected using @CCC/Framework/Validation-Tier-Selection-Quick-Reference.md]
 **Cross-validation Requirements**: [Multi-source verification criteria]
 
 ### Risk Assessment
@@ -335,7 +351,7 @@ The comprehensive `research-proposal.md` serves as the complete planning documen
 ## Deep-Research Execution Readiness
 
 ### Search Strategy Framework
-[How topics will be converted to [SEARCH-###] tasks for /deep-research]
+[How topics will be converted to [SEARCH-###] tasks for /deep-research using domain-specific strategies from @Templates/Search-Strategies/]
 
 ### Validation Requirements
 [Quality standards and validation tiers for research execution]
@@ -369,6 +385,22 @@ The comprehensive `research-proposal.md` serves as the complete planning documen
 - Real-world application emphasis
 - User experience and workflow optimization
 - Implementation complexity assessment
+
+### **Product Research & Analysis**
+```
+/research-plan "best options for [product category]" --focus product --depth detailed --integration deep-research
+```
+- Product comparison and market analysis focus
+- Cost-benefit evaluation frameworks
+- User experience and practical considerations
+
+### **Creative & Cultural Analysis**
+```
+/research-plan "analysis of [literary/cultural topic]" --focus creative --depth comprehensive --priority detailed
+```
+- Cultural context and significance analysis
+- Multiple perspective integration
+- Thematic and artistic interpretation
 
 ## Integration with Deep-Research Command
 
@@ -434,6 +466,14 @@ The comprehensive `research-proposal.md` serves as the complete planning documen
 - Implementation roadmap development
 - Risk assessment and mitigation planning
 - Resource and timeline estimation
+
+### **Market & Product Analysis Planning**
+```
+/research-plan "market analysis for [product category] in [context]" --focus product --depth comprehensive --integration deep-research
+```
+- Competitive landscape assessment
+- Market positioning and opportunity analysis
+- Consumer behavior and preference research
 
 ## Framework Compliance
 

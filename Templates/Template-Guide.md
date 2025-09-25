@@ -11,6 +11,7 @@
 |-----------------|-------------|-----------------|-------------------|
 | **Quick Ideas** | [[Documents/Quick-Note-Template]] | Rapid capture, brainstorming | Draft → Essential |
 | **Research Work** | [[Documents/Research-Report-Template]] | Academic analysis, literature reviews | Extended/Comprehensive |
+| **Product Analysis** | [[Documents/Product-Analysis-Template]] | Product comparisons, buying guides, market research | Essential |
 | **Technical Docs** | [[Documents/Technical-Guide-Template]] | Programming guides, API docs | Essential/Extended |
 | **Survival Skills** | [[Documents/Survival-Manual-Template]] | Practical skills, emergency prep | Essential + Safety |
 | **Literary Analysis** | [[Documents/Literature-Analysis-Template]] | Book reviews, cultural analysis | Essential/Extended |
@@ -68,6 +69,28 @@
 - **Preferred**: Comprehensive (27-item) for publication
 - **Evidence**: B3+ Admiralty Code ratings required
 - **Review**: Expert validation for critical findings
+
+### 🛍️ **Product Analysis Template**
+**Purpose**: Product comparisons, buying guides, and market research
+**Workflow**: Research → Compare → Analyze → Recommend → Validate
+
+**When to Use**:
+- Product comparisons and buying guides
+- Market analysis and trend research
+- Service evaluation and selection
+- Technology/tool selection decisions
+
+**Key Features**:
+- **Comparison Matrices**: Systematic feature and cost comparison
+- **Pros/Cons Analysis**: Balanced evaluation of alternatives
+- **Use Case Matching**: Recommendations for specific needs/budgets
+- **Source Bias Assessment**: Independent vs. marketing materials
+
+**Quality Requirements**:
+- **Minimum**: Essential (10-item) validation
+- **Independent Sources**: Prefer unaffiliated reviews and testing
+- **Cost Verification**: Current pricing from multiple sources
+- **Update Frequency**: Regular review for market changes
 
 ### 💻 **Technical Guide Template**
 **Purpose**: Programming guides and technical documentation
