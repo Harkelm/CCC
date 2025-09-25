@@ -55,11 +55,11 @@ This command leverages the CCC Agent Component System with dynamic loading:
 - **CCC/Framework/Workflow-Core-Labels.md**: Systematic organization and discovery
 
 #### **Contextual Components (Domain-Dependent)**
-- **CCC/Framework/Domain-Detection-Quick-Reference.md**: Auto-detection logic for domain classification
-- **CCC/Framework/Validation-Tier-Selection-Quick-Reference.md**: Smart validation tier assignment
-- **CCC/Framework/Comparative-Analysis-Quick-Reference.md**: Systematic comparison framework
-- **CCC/Framework/Validation-Quick-Reference.md**: Applied for academic/safety-critical research
-- **CCC/Framework/Risk-Quick-Reference.md**: Loaded for practical/safety research
+- **@CCC/Framework/Domain-Detection-Quick-Reference.md**: Auto-detection logic for domain classification
+- **@CCC/Framework/Validation-Tier-Selection-Quick-Reference.md**: Smart validation tier assignment
+- **@CCC/Framework/Comparative-Analysis-Quick-Reference.md**: Systematic comparison framework
+- **@CCC/Framework/Validation-Quick-Reference.md**: Applied for academic/safety-critical research
+- **@CCC/Framework/Risk-Quick-Reference.md**: Loaded for practical/safety research
 - **Templates/Template-Guide.md**: Smart template selection based on domain
 - **Templates/Search-Strategies/Product-Research-Strategy.md**: Product domain research methodology
 
