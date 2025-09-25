@@ -4,7 +4,6 @@
 # Exclude user's private research results while keeping the framework structure
 Archive/Research/
 Research/Active-Projects/Deep-Research/camping-equipment-research
-Research/Active-Projects/Deep-Research/survival-utility-equipment-research
 
 # Common development files (add more as needed)
 .DS_Store
