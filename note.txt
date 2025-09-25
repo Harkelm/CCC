@@ -11,5 +11,5 @@ PRODUCT RESEARCH WORKFLOW
         - military-order-sheet | consumer-tech-comparison
     d. Validation - quality control, verification, and compliance checking
         - enhanced-PRISMA | CCC | None
-
-        
+4. Context-Commander reads all ACS components and then begins organizing [SEARCH-###] tasks based on the component instruct
+    a. breaking down user query, alternative angles, etc.
