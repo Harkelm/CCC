@@ -14,8 +14,8 @@ Execute comprehensive research across any domain using adaptive agent orchestrat
 
 **DOMAIN LANGUAGE WARNING**: Do NOT use implementation/technical language unless the research is specifically about HOW to build/implement something technical. Product research is about WHAT to buy, not how to implement. Historical research is about WHAT happened, not how to implement. Match your language to the research domain appropriately.
 
-### **Claude's Direct Responsibilities:**
-1. **Phase 1**: Domain classification and adaptive planning with CCC framework integration
+### **Claude's Direct Responsibilities (No Agent Delegation):**
+1. **Phase 1**: **DIRECT domain classification and adaptive planning** - Claude personally performs domain detection, template selection, and wave planning using CCC framework components
 2. **Phase 2**: Multi-agent research execution with flexible wave structure
 3. **Phase 3**: Comparative analysis synthesis with evidence evaluation
 4. **Phase 4**: Domain-appropriate research report generation with contextually relevant recommendations
@@ -72,17 +72,17 @@ This command leverages the CCC Agent Component System with dynamic loading:
 ## Research Architecture Framework
 
 ### **Phase 1: Domain Analysis & Adaptive Planning [FOUNDATION]**
-**Duration**: 5-10 minutes | **Framework Integration**: Essential
+**Duration**: 5-10 minutes | **Framework Integration**: Essential | **CLAUDE DIRECT EXECUTION - NO AGENTS**
 
-**Domain Classification Protocol**:
+**Domain Classification Protocol (Claude Direct Execution)**:
 ```
-📋 Research Domain Analysis:
+📋 Research Domain Analysis - CLAUDE PERFORMS DIRECTLY:
 [ ] **MANDATORY**: Current datetime recorded in 'YYYY-MM-DD HH:MM:SS CST' format
-[ ] Research domain identified using CCC/Framework/Domain-Detection-Quick-Reference.md
-[ ] Template selection from Templates/Template-Guide.md based on domain
-[ ] Validation tier assignment using CCC/Framework/Validation-Tier-Selection-Quick-Reference.md
-[ ] Component loading decisions based on research requirements
-[ ] Wave structure adaptation based on topic complexity
+[ ] **CLAUDE DIRECTLY**: Research domain identified using CCC/Framework/Domain-Detection-Quick-Reference.md
+[ ] **CLAUDE DIRECTLY**: Template selection from Templates/Template-Guide.md based on domain
+[ ] **CLAUDE DIRECTLY**: Validation tier assignment using CCC/Framework/Validation-Tier-Selection-Quick-Reference.md
+[ ] **CLAUDE DIRECTLY**: Component loading decisions based on research requirements
+[ ] **CLAUDE DIRECTLY**: Wave structure adaptation based on topic complexity
 ```
 
 **Domain Classification Matrix**:
@@ -133,6 +133,8 @@ Domain → Template Mapping (from Templates/Template-Guide.md):
 ### **Phase 2: Multi-Agent Research Execution [TACTICAL]**
 **Duration**: 20-60 minutes | **Adaptive Scaling**
 
+**CRITICAL**: Agents are deployed ONLY AFTER Claude completes Phase 1 domain classification directly. No agents perform domain detection or template assignment.
+
 **Flexible Wave Architecture**:
 
 #### **[WAVE-001]: Foundation Research**
@@ -144,11 +146,11 @@ Domain → Template Mapping (from Templates/Template-Guide.md):
 Task: CCC-Web-Researcher
 Context: "Execute [SEARCH-00X]: [specific research objective].
 
-FRAMEWORK INTEGRATION:
+FRAMEWORK INTEGRATION (PRE-DETERMINED BY CLAUDE):
 - Apply CCC/Framework/Admiralty-Rating-Codes.md (minimum B3 rating)
-- Use template: [domain-appropriate template from Template-Guide.md]
-- Search strategy: [domain-specific strategy from Search-Strategies/]
-- Validation tier: [Essential/Extended/Comprehensive from Validation-Tier-Selection]
+- Use template: [domain-appropriate template already selected by Claude from Template-Guide.md]
+- Search strategy: [domain-specific strategy already selected by Claude from Search-Strategies/]
+- Validation tier: [Essential/Extended/Comprehensive already assigned by Claude from Validation-Tier-Selection]
 
 RESEARCH FOCUS:
 - Understand 'why' options exist and their comparative advantages
@@ -173,12 +175,12 @@ OUTPUT REQUIREMENTS:
 
 **Additional Waves**: Scale beyond 3 waves for complex research requiring specialized investigation phases
 
-**Agent Context Package Requirements**:
+**Agent Context Package Requirements (Claude Pre-Determined)**:
 - **CCC/Agents/Agent.md**: Core behavioral specifications and quality standards
 - **Research Planning Context**: Current wave objectives and findings from previous waves
-- **Template Specifications**: Domain-appropriate template from Template-Guide.md
-- **Search Strategy**: Domain-specific methodology from Search-Strategies/ directory
-- **Validation Requirements**: Tier from Validation-Tier-Selection-Quick-Reference.md
+- **Template Specifications**: Domain-appropriate template already selected by Claude from Template-Guide.md
+- **Search Strategy**: Domain-specific methodology already selected by Claude from Search-Strategies/ directory
+- **Validation Requirements**: Validation tier already assigned by Claude from Validation-Tier-Selection-Quick-Reference.md
 - **Admiralty Standards**: Source credibility requirements from Admiralty-Rating-Codes.md
 - **Comparative Framework**: Comparative-Analysis-Quick-Reference.md for Wave 3 tasks
 - **Progress Tracking**: Status indicators from Status-Tag-Codes.md
@@ -278,11 +280,11 @@ Task: CCC-Web-Researcher
 Description: "Comprehensive [domain] research with structured methodology"
 Context: "Execute systematic research using CCC-Web-Researcher methodology:
 
-DOMAIN INTEGRATION:
-- Domain: [detected from Domain-Detection-Quick-Reference.md]
-- Template: [selected from Template-Guide.md mapping]
-- Search Strategy: [appropriate strategy from Search-Strategies/]
-- Validation Tier: [selected from Validation-Tier-Selection-Quick-Reference.md]
+DOMAIN INTEGRATION (PRE-DETERMINED BY CLAUDE):
+- Domain: [already detected by Claude from Domain-Detection-Quick-Reference.md]
+- Template: [already selected by Claude from Template-Guide.md mapping]
+- Search Strategy: [appropriate strategy already selected by Claude from Search-Strategies/]
+- Validation Tier: [already selected by Claude from Validation-Tier-Selection-Quick-Reference.md]
 
 CRITICAL DOMAIN GUIDANCE:
 - Product Domain: Focus on WHAT to buy/choose, NOT how to implement
@@ -306,10 +308,10 @@ Task: CCC-Web-Researcher
 Description: "Product research with specialized methodology"
 Context: "Product domain research using Templates/Search-Strategies/Product-Research-Strategy.md:
 
-FRAMEWORK:
-- Template: Product-Analysis-Template
-- Search Strategy: Product-Research-Strategy (independent sources, bias detection)
-- Validation: Essential tier from Validation-Tier-Selection-Quick-Reference.md
+FRAMEWORK (PRE-DETERMINED BY CLAUDE):
+- Template: Product-Analysis-Template (already selected by Claude)
+- Search Strategy: Product-Research-Strategy (already selected by Claude with independent sources, bias detection)
+- Validation: Essential tier already assigned by Claude from Validation-Tier-Selection-Quick-Reference.md
 
 CRITICAL: This is PRODUCT research - focus on WHAT to buy/choose, NOT implementation.
 Use language appropriate for purchasing decisions: recommendations, cost-benefit, purchasing strategy.
@@ -324,10 +326,10 @@ Task: CCC-Web-Researcher
 Description: "Academic research with Enhanced PRISMA compliance"
 Context: "Academic investigation using comprehensive validation:
 
-FRAMEWORK:
-- Template: Research-Report-Template
-- Validation: Extended tier, CCC/Standards/Enhanced-PRISMA.md for critical findings
-- Search Strategy: Academic-Research-Strategy (peer-reviewed focus)
+FRAMEWORK (PRE-DETERMINED BY CLAUDE):
+- Template: Research-Report-Template (already selected by Claude)
+- Validation: Extended tier already assigned by Claude, CCC/Standards/Enhanced-PRISMA.md for critical findings
+- Search Strategy: Academic-Research-Strategy (peer-reviewed focus, already selected by Claude)
 - Source minimum: A2 rating for key claims
 
 CRITICAL: This is ACADEMIC research - focus on WHAT research shows and scholarly consensus.
