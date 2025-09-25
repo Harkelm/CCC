@@ -1,1 +1,15 @@
-Sub-agent should not be the one doing initial domain classification etc.
+PRODUCT RESEARCH WORKFLOW
+
+1. User prompt received:    "Recommendations for mens hiking outdoor clothing, tactical / minimal preference."
+2. Context-Commander immediately gets:
+    a. Current local datetime {YYYY-MM-DD HH:MM:SS CST}
+    b. Current research IDs / Directories, looks at `Research/Active-Projects/Deep-Research/` folder for all titles and IDs
+3. Context-Commander thinks and decides which ACS components to include or exclude for this scope based on a simple matrix:
+    a. Behavioral - core intelligence and decision-making patterns
+    b. Procedural - specific methodologies, workflows, and processes
+    c. Format - how agent(s) structure and present their output or results
+        - military-order-sheet | consumer-tech-comparison
+    d. Validation - quality control, verification, and compliance checking
+        - enhanced-PRISMA | CCC | None
+
+        
