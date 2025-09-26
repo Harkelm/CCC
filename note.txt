@@ -1,3 +1,5 @@
 [SEARCH-###] in agent task title
 
 Itemized template for SEARCH-###.md format (similar struct, always used for every SEARCH unless exception noted)
+
+Implementation guides for clothing patterns. 
