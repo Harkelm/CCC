@@ -1,0 +1,179 @@
+# ACS Framework Configuration
+# Demonstrates hybrid symbolic-neural AI configuration patterns
+
+[framework]
+name = "ACS-Example"
+version = "0.1.0"
+description = "Hybrid Symbolic-Neural AI Architecture Example"
+
+[storage]
+# REDB Configuration - Structured state management
+redb_path = "data/agents.redb"
+enable_compression = true
+backup_interval_hours = 24
+
+# Qdrant Configuration - Semantic embeddings and similarity
+qdrant_url = "http://localhost:6334"
+collection_name = "agent_knowledge"
+embedding_dimension = 384
+distance_metric = "Cosine"
+
+# Hybrid Storage Coordination
+sync_batch_size = 100
+consistency_mode = "Eventually"  # Options: "Immediate", "Eventually", "EventDriven"
+
+[coordination]
+# Multi-Agent Coordination Settings
+max_concurrent_agents = 10
+coordination_timeout_ms = 30000
+consensus_threshold = 0.67
+
+# Semantic Routing Configuration
+enable_semantic_routing = true
+similarity_threshold = 0.75
+routing_cache_size = 1000
+
+# Cloud Integration (Optional)
+enable_cloud_delegation = false
+cloud_provider = "openai"  # Options: "openai", "anthropic", "local"
+delegation_threshold = 0.9  # When to delegate to cloud
+
+[behavioral]
+# Systematic Research Agent Configuration
+enable_systematic_research = true
+evidence_threshold = "B3"  # Admiralty Code: A1, A2, A3, B1, B2, B3, etc.
+validation_strictness = "Essential"  # Options: "Essential", "Extended", "Comprehensive"
+enable_cross_validation = true
+minimum_sources = 3
+bias_detection_threshold = 0.3
+
+# Validation Tiers (based on Enhanced PRISMA)
+[behavioral.validation_tiers]
+essential_checks = [
+    "source_credibility",
+    "content_accuracy",
+    "temporal_relevance",
+    "bias_assessment",
+    "basic_consistency"
+]
+
+extended_checks = [
+    "cross_validation",
+    "methodology_soundness",
+    "expert_review",
+    "statistical_validity",
+    "conflict_resolution"
+]
+
+comprehensive_checks = [
+    "peer_review_simulation",
+    "meta_analysis_compliance",
+    "systematic_review_standards",
+    "publication_bias_detection",
+    "heterogeneity_assessment"
+]
+
+[performance]
+# Performance Monitoring and Optimization
+enable_metrics_collection = true
+metrics_retention_days = 30
+performance_sampling_rate = 0.1
+
+# Resource Limits
+max_memory_mb = 4096
+max_cpu_percent = 80
+max_storage_gb = 100
+
+# Optimization Settings
+enable_caching = true
+cache_ttl_seconds = 3600
+enable_compression = true
+batch_processing_size = 50
+
+[security]
+# Security Configuration
+enable_audit_logging = true
+audit_log_retention_days = 90
+require_evidence_validation = true
+
+# Data Protection
+encrypt_storage = false  # Enable for production
+encryption_algorithm = "AES-256-GCM"
+key_rotation_days = 90
+
+# Access Control
+require_authentication = false  # Enable for multi-user deployments
+session_timeout_minutes = 60
+
+[logging]
+# Logging Configuration
+level = "info"  # Options: "debug", "info", "warn", "error"
+format = "json"  # Options: "json", "compact", "pretty"
+output = "stdout"  # Options: "stdout", "stderr", "file"
+
+# Structured Logging
+enable_structured_logging = true
+include_agent_context = true
+include_performance_metrics = true
+
+[development]
+# Development and Testing Settings
+enable_debug_mode = false
+mock_external_services = false
+enable_hot_reload = false
+
+# Testing Configuration
+test_data_path = "test_data/"
+enable_test_fixtures = true
+generate_test_reports = true
+
+# Benchmarking
+enable_benchmarking = false
+benchmark_output_path = "benchmarks/"
+benchmark_iterations = 1000
+
+[integration]
+# External Service Integration
+[integration.embedding_service]
+provider = "local"  # Options: "local", "openai", "huggingface"
+model = "all-MiniLM-L6-v2"
+batch_size = 32
+timeout_ms = 5000
+
+[integration.search_engines]
+enable_academic_search = false
+enable_web_search = false
+enable_documentation_search = true
+
+# Rate Limiting
+requests_per_minute = 60
+burst_size = 10
+
+[deployment]
+# Deployment Configuration
+environment = "development"  # Options: "development", "staging", "production"
+instance_id = "acs-example-001"
+region = "local"
+
+# Health Checks
+enable_health_checks = true
+health_check_interval_seconds = 30
+health_check_timeout_seconds = 5
+
+# Monitoring Integration
+enable_prometheus_metrics = false
+prometheus_port = 9090
+enable_jaeger_tracing = false
+jaeger_endpoint = "http://localhost:14268/api/traces"
+
+# Feature Flags
+[deployment.features]
+enable_experimental_features = false
+enable_beta_features = true
+enable_deprecated_features = false
+
+# Specific Feature Toggles
+semantic_routing_v2 = false
+advanced_consensus_algorithms = false
+neural_symbolic_fusion = true
+cloud_hybrid_mode = false
