@@ -27,61 +27,6 @@
   - Example: `[ACTION-001]` Execute automated validation checklist
   - Usage: Time-sensitive activities, rapid response items
 
-### 🔍 **Validation & Quality Tags**
-- **[VERIFY-###]** - Verification and validation activities
-  - Format: Sequential numbering within validation phases
-  - Example: `[VERIFY-001]` Cross-validate source credibility using Admiralty Code
-  - Usage: Quality assurance checkpoints, evidence validation, compliance verification
-
-- **[VALID-###]** - Validation checkpoint identifiers
-  - Format: Alignment with validation tier requirements
-  - Example: `[VALID-001]` Enhanced PRISMA 15-item validation complete
-  - Usage: Systematic validation milestones, quality gate completions
-
-### 🚪 **Phase & Gateway Tags**
-- **[PHASE-###]** - Major workflow phases and lifecycle stages
-  - Format: Aligned with 4-phase CCC lifecycle (001-004 for standard phases)
-  - Example: `[PHASE-001]` Content Initiation and Classification
-  - Usage: High-level workflow organization, milestone tracking
-
-- **[GATE-###]** - Quality gates and approval checkpoints
-  - Format: Sequential with phase alignment (001-004 for standard gates)
-  - Example: `[GATE-001]` Content Initiation Authorization Required
-  - Usage: Decision points, approval requirements, quality thresholds
-
-### ⚠️ **Risk & Security Tags**
-- **[RISK-###]** - Risk identification and assessment items
-  - Format: Risk category coding (001-099: Critical, 100-199: High, 200-299: Medium, 300+: Low)
-  - Example: `[RISK-001]` Information security risk - unauthorized access potential
-  - Usage: ISO 31000 risk management, threat identification, mitigation planning
-
-- **[SEC-###]** - Security controls and compliance items
-  - Format: Aligned with CIS Controls numbering where applicable
-  - Example: `[SEC-001]` CIS Control 1.1 - Asset inventory implementation
-  - Usage: Security framework implementation, compliance tracking
-
-### 📊 **Quality & Evidence Tags**
-- **[EVID-###]** - Evidence collection and source tracking
-  - Format: Include Admiralty Code rating in description
-  - Example: `[EVID-001]` Source validation: Technical documentation [A1-1]
-  - Usage: Source management, evidence preservation, credibility tracking
-
-- **[QUAL-###]** - Quality assessment and improvement items
-  - Format: Sequential numbering with quality tier indication
-  - Example: `[QUAL-001]` Content accuracy verification against source material
-  - Usage: Quality monitoring, improvement tracking, standard compliance
-
-### 🔄 **Process & Integration Tags**
-- **[PROC-###]** - Process documentation and workflow items
-  - Format: Process category alignment (001-099: Core, 100-199: Advanced, etc.)
-  - Example: `[PROC-001]` AI-human collaboration checkpoint procedure
-  - Usage: Standard operating procedures, workflow documentation
-
-- **[INTEG-###]** - Integration and cross-system coordination
-  - Format: Integration scope numbering
-  - Example: `[INTEG-001]` Platform-CCC framework integration requirements
-  - Usage: System integration, cross-platform coordination, compatibility
-
 ---
 
 ## Implementation Standards
@@ -97,7 +42,6 @@
 
 ### 🔢 **Numbering Conventions**
 - **Sequential Numbering**: Within category and scope (001, 002, 003...)
-- **Priority Indicators**: Critical (001-099), High (100-199), Medium (200-299), Low (300+)
 - **Phase Alignment**: Tags aligned with CCC 4-phase lifecycle where applicable
 - **Wave Coordination**: Research waves use consistent numbering across related searches
 

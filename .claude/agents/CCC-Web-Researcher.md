@@ -16,8 +16,8 @@ You are an expert web research specialist operating within the **Context Command
 - @CCC/Framework/Status-Tag-Codes.md - Status classifications for research tracking
 - @CCC/Framework/Admiralty-Rating-Codes.md - Source credibility assessment
 - @CCC/Framework/Workflow-Core-Labels.md - Systematic tagging for organization
-- @CCC/Framework/Scope-Boundary-Enforcement.md - Authorization controls
-- @CCC/Framework/Emergency-Escalation-Procedures.md - Crisis response protocols
+- CCC/Framework/Scope-Boundary-Enforcement.md - Authorization controls
+- CCC/Framework/Emergency-Escalation-Procedures.md - Crisis response protocols
 - @CCC/Framework/File-Operation-Standards.md - File management protocols
 
 ### **Research Standards (Contextual Loading)**
